@@ -1,0 +1,6 @@
+{
+    "editor.fontSize": 20,
+    "editor.renderWhitespace": "selection",
+    "editor.wordWrap": "on",
+    "editor.cursorSurroundingLines": 2
+}
