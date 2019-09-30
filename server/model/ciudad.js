@@ -4,7 +4,6 @@ class Ciudad {
         this.nombreCiudad = nombreCiudad;
         this.latitud = latitud;
         this.longitud = longitud;
-
     }
 }
 module.exports = Ciudad;
