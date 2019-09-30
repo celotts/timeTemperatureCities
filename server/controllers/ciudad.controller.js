@@ -15,7 +15,7 @@ ciudad.push(new Ciudad('USA', 'Georgia', -83.5001800, 32.7504200));
 
 ciudadController.setCiudades = async (req, res, next) => {
     ciudad.forEach(element => {
-        redisCiudad.hmset(element.codigoCiudad, element.nombreCiudad, element.latitud, element.longitud)
+        redisCiudad.hmset(element.codigoCiudad, { ['nombreCiudad']: element.nombreCiudad, ['latitud']: element.latitud, ['longitud']: element.longitud })
     });
     redisCiudad.hgetall('codigoCiudad', function (err, object) {
         return res.json(object);
